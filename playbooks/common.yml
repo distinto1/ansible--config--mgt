@@ -22,7 +22,7 @@
         name: wireshark
         state: latest
 
-    name: install nginx at the latest version
+    - name: install nginx at the latest version
       apt:
         name: nginx
         state: latest
