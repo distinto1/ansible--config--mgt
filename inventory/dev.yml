@@ -1,5 +1,5 @@
-#[nfs]
-#<NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user
+# [nfs]
+# <NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user
 
 [webservers]
 172.31.43.39 ansible_ssh_user=ec2-user
