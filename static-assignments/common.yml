@@ -10,7 +10,7 @@
    
 
 - name: update LB server
-  hosts: lb,db
+  hosts: lb
   become: yes
   tasks:
     - name: Update apt repo
