@@ -1,4 +1,4 @@
-# ---
+ ---
 # # - hosts: all
 # # - import_playbook: ../static-assignments/common.yml
 # # - import_playbook: ../static-assignments/common-del.yml
@@ -6,14 +6,23 @@
 # - hosts: uat-webservers
 # - import_playbook: ../static-assignments/uat-webservers.yml
 
----
+
 # - hosts: all
 # - name: Include dynamic variables 
-#   tasks:
-#   import_playbook: ../static-assignments/common.yml 
+#   # tasks:
+#   # import_playbook: ../static-assignments/common.yml 
 #   include: ../dynamic-assignments/env-vars.yml
 #   tags:
 #     - always
+
+---
+- hosts: all
+  name: Include dynamic variables 
+  tasks:
+    - include: ../dynamic-assignments/env-vars.yml
+  tags:
+    - always
+
 
 # -  hosts: webservers
 # - name: Webserver assignment
@@ -23,13 +32,13 @@
 #  - name: installing db
 #    import_playbook: ../static-assignments/db.yml  
 
-- hosts: all
-- name: Include dynamic variables
-  #tasks:
-  #import_playbook: ../static-assignments/common.yml
-  include: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
+# - hosts: all
+# # - name: Include dynamic variables
+#   #tasks:
+#   #import_playbook: ../static-assignments/common.yml
+#   include: ../dynamic-assignments/env-vars.yml
+#   tags:
+#     - always
 
 - hosts: lb
 - name: Loadbalancers assignment
