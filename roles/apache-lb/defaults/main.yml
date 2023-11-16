@@ -66,4 +66,4 @@ load_balancer_is_required: false
 #webservers
 loadbalancer_name: "myapp1"
 ip-172-31-23-97.us-east-1.compute.internal: "172.31.23.97 weight=3"
-ip-172-31-26-0.us-east-1.compute.internal: "172.31.26.0 weight=3"
+ip-172-31-20-78.us-east-1.compute.internal: "172.31.20.78 weight=3"
