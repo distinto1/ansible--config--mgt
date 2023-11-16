@@ -5,8 +5,9 @@
 # 172.31.41.226 ansible_ssh_user=ec2-user
 # #<Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
 
-[db]
-172.31.30.167 ansible_ssh_user=ubuntu 
+# [db]
+# 172.31.30.167 ansible_ssh_user=ubuntu 
 
-# [lb]
-# 172.31.42.136 ansible_ssh_user=ubuntu
+ [lb]
+ 172.31.16.18 ansible_ssh_user=ubuntu
+#  172.31.19.104 ansible_ssh_user=ubuntu
