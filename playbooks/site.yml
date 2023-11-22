@@ -1,48 +1,26 @@
- ---
-# # - hosts: all
-# # - import_playbook: ../static-assignments/common.yml
-# # - import_playbook: ../static-assignments/common-del.yml
-
-# - hosts: uat-webservers
-# - import_playbook: ../static-assignments/uat-webservers.yml
-
-
-# - hosts: all
-# - name: Include dynamic variables 
-#   # tasks:
-#   # import_playbook: ../static-assignments/common.yml 
-#   include: ../dynamic-assignments/env-vars.yml
-#   tags:
-#     - always
-
 ---
 - hosts: all
-  name: Include dynamic variables 
+  vars_files:
+    - ../dynamic-assignments/env-vars.yml
+
   tasks:
-    - include: ../dynamic-assignments/env-vars.yml
+    - name: Include dynamic variables
+      include: ../dynamic-assignments/env-vars.yml
   tags:
     - always
+  
 
-
-# -  hosts: webservers
+# - hosts: webservers
 # - name: Webserver assignment
 #   import_playbook: ../static-assignments/webservers.yml
 
-#  - hosts: db
-#  - name: installing db
-#    import_playbook: ../static-assignments/db.yml  
-
-# - hosts: all
-# # - name: Include dynamic variables
-#   #tasks:
-#   #import_playbook: ../static-assignments/common.yml
-#   include: ../dynamic-assignments/env-vars.yml
-#   tags:
-#     - always
+# - hosts: db
+# - name: installing db
+#   import_playbook: ../static-assignments/db.yml
 
 - hosts: lb
 - name: Loadbalancers assignment
-  
+
   import_playbook: ../static-assignments/loadbalancers.yml
-  when: load_balancer_is_required 
+  when: load_balancer_is_required
 
