@@ -8,8 +8,7 @@ pipeline {
               deleteDir()
             }
           }
-        }
-        
+        }    
     stage('Build') {
       steps {
         script {
@@ -17,7 +16,6 @@ pipeline {
         }
       }
     }
-
     stage('Test') {
       steps {
         script {
@@ -25,7 +23,6 @@ pipeline {
         }
       }
     }
-
     stage('Package') {
       steps {
         script {
@@ -33,7 +30,6 @@ pipeline {
         }
       }
     }
-
     stage('Deploy') {
       steps {
         script {
@@ -41,7 +37,6 @@ pipeline {
         }
       }
     }
-
     stage("clean Up"){
        steps {
         cleanWs()
