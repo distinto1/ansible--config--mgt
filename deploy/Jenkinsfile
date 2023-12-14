@@ -22,14 +22,14 @@ pipeline {
          steps{
             git branch: 'main', url: 'https://github.com/distinto1/ansible--config--mgt.git'
          }
-       }
+      }
 
       stage('Prepare Ansible For Execution') {
         steps {
           sh 'echo ${WORKSPACE}' 
           sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'  
         }
-     }
+      }
 
       stage('Run Ansible playbook') {
         steps {
