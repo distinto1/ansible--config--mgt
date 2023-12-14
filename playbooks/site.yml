@@ -1,23 +1,24 @@
 ---
-- name: Include dynamic variables 
-  hosts: all
+- hosts: db
+- name: database assignment
+  ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
-# - name: import common file
-#   import_playbook: ../static-assignments/common.yml
-#   tags:
-#     - always
+- hosts: nginx
+- name: nginx assignment
+  ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
-- name: include env-vars file
-  import_playbook: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
+# - hosts: artifactory
+# - name: artifactory assignment
+#   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
-# - name: import database file
-#   import_playbook: ../static-assignments/db.yml
+# - hosts: todo
+# - name: Deploy the todo application
+#   ansible.builtin.import_playbook: ../static-assignments/php.yml
 
-#- name: import webservers file
- # import_playbook: ../static-assignments/webservers.yml
+# - hosts: sonarqube
+# - name: sonarqube assignment
+#   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
 
-- name: import Loadbalancers assignment
-  import_playbook: ../static-assignments/loadbalancers.yml
-  when: load_balancer_is_required
+# - hosts: sonar
+# - name: sonarqube assignment
+#   ansible.builtin.import_playbook: ../static-assignments/uat-webservers.yml
