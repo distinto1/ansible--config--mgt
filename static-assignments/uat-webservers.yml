@@ -1,4 +1,24 @@
 ---
-- hosts: uat-webservers
+- hosts: db
   roles:
-     - webserver
+     - mysql
+  
+- hosts: nginx
+  roles:
+     - nginx
+
+# - hosts: artifactory
+#   roles:
+#      - artifactory
+  
+# - hosts: todo
+#   roles:
+#     - php
+
+# - hosts: sonarqube
+#   roles:
+#     - sonarqube
+
+# - hosts: sonar
+#   roles:
+#     - sonar
