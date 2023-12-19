@@ -3,13 +3,13 @@
 #   roles:
 #      - mysql
   
-- hosts: nginx
-  roles:
-     - nginx
-
-# - hosts: artifactory
+# - hosts: nginx
 #   roles:
-#      - artifactory
+#      - nginx
+
+- hosts: artifactory
+  roles:
+     - artifactory
   
 # - hosts: todo
 #   roles:
