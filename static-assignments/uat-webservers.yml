@@ -17,7 +17,7 @@
 
 - hosts: sonarqube
   roles:
-    - sonarqube
+     - sonarqube
 
 # - hosts: sonar
 #   roles:
