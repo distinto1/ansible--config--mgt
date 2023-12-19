@@ -7,11 +7,11 @@
 #[sonarqube:vars]
 #ansible_user=ubuntu
 
-[artifactory]
-172.31.92.78  ansible_ssh_user='ec2-user'
+# [artifactory]
+# 172.31.92.78  ansible_ssh_user='ec2-user'
 
-# [sonarqube]
-# 172.31.9.195 ansible_ssh_user='ubuntu'
+[sonarqube]
+172.31.81.218 ansible_ssh_user='ubuntu'
 
 # [sonar]
 # 172.31.0.224 ansible_ssh_user='ubuntu'
