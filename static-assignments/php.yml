@@ -49,7 +49,7 @@
 
     - name: Download the artifact
       get_url:
-        url: http://54.86.164.64:8082/artifactory/project14/php-todo
+        url: http://54.86.164.64:8081/artifactory/project14/php-todo
         dest: /home/ec2-user/
         url_username: admin
         url_password: cmVmdGtuOjAxOjE3MzQ1NDMzMTE6ZWRsYmtJS3owbkpmcFpmV2E2dGpKbzBGMldo
