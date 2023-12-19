@@ -22,7 +22,7 @@
 - hosts: sonarqube
   become: true
   roles:
-     - sonarqube
+      - sonarqube
 
 # - hosts: sonar
 #   roles:
