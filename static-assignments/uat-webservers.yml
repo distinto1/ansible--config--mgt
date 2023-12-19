@@ -1,15 +1,15 @@
 ---
-# - hosts: db
-#   roles:
-#      - mysql
+- hosts: db
+  roles:
+     - mysql
   
 # - hosts: nginx
 #   roles:
 #      - nginx
 
-- hosts: artifactory
-  roles:
-     - artifactory
+# - hosts: artifactory
+#   roles:
+#      - artifactory
   
 # - hosts: todo
 #   roles:
